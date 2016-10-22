@@ -3,12 +3,15 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from "../pages/login/login";
+import { MovieService } from "../providers/movie";
+import { AddMovie } from '../pages/add-movie/addmovie';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    Login
+    Login,
+    AddMovie
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,8 +20,9 @@ import { Login } from "../pages/login/login";
   entryComponents: [
     MyApp,
     HomePage,
-    Login
+    Login,
+    AddMovie
   ],
-  providers: []
+  providers: [ MovieService ]
 })
 export class AppModule {}

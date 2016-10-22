@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Agregar Pelicula</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <form #form="ngForm"  >
+        <ion-item>
+            <ion-label floating>Nombre</ion-label>
+            <ion-input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="movie.nombre" 
+                required></ion-input>
+        </ion-item>
+        <!--<p *ngIf="!nombre.valid && !nombre.pristine">Campo Obligatorio</p>-->
+        <ion-item>
+            <ion-label floating>Sinopsis</ion-label>
+            <ion-input type="text" #sinopsis="ngModel" name="sipnosis" [(ngModel)]="movie.sinopsis" 
+                required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Imagen</ion-label>
+            <ion-input type="text" #imagen="ngModel" name="imagen" [(ngModel)]="movie.imagen" 
+                required></ion-input>
+        </ion-item>
+    </form>
+    <button ion-button full [disabled]="!form.valid" (click)="insertMovie()">Agregar</button>
+
+</ion-content>

@@ -14,7 +14,8 @@ export class Login {
   constructor(public navCtrl: NavController) {}
 
   onIn(){
-    this.navCtrl.push(HomePage)
+    //this.navCtrl.push(HomePage)
+    this.navCtrl.setRoot(HomePage)
   }
 
  
